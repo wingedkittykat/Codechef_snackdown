@@ -5,18 +5,19 @@ for i in range (0,T):
     arrSum=0
     x=0
     count=0
+    arr=[]
     arrcheck=[]
     arr=input().split(' ')
     for j in range(0,N):
         arr[j]=int(arr[j])
         arrcheck.append(0)
-    print(arr)
     arrcheck[0]=1
     while(arrcheck[N-1]!=1):
+        tempSum=arrSum
         while(arrcheck[x]!=0):
-            tempSum=arrSum
             arrSum=arrSum+arr[x]
             x=x+1
+        arrSum=tempSum+arrSum    
         for y in range (tempSum,arrSum+1):
             if(y<N):
                 arrcheck[y]=1
