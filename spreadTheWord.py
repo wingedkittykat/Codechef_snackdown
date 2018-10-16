@@ -23,5 +23,7 @@ for i in range (0,T):
                 arrcheck[y]=1
             else:
                 break    
-        count=count+1
+        count=count+1    
+    if(count==0):
+        count=1
     print(count)                

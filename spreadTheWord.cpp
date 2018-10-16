@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int T,N,x=0,arrSum=0,count=0;
+    int T,N,x=0,arrSum=0,count=0,tempSum=0;
     cin>>T;
     for(int i=0;i<T;i++){
         cin>>N;
@@ -17,6 +17,7 @@ int main()
         }
         arrCheck[0]=1;
         while(arrCheck[N-1]!=1){
+            tempSum=arrSum;
             while(1){
                 if(arrCheck[x]==0){
                     break;
@@ -26,6 +27,7 @@ int main()
                     x=x+1;
                 }
             }
+            arrSum=tempSum+arrSum;
             for(int y=1;y<arrSum+1;y++){
                 arrCheck[y]=1;
             }
